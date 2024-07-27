@@ -27,33 +27,32 @@ const collectEmployees = function() {
       }  
   
     return employees;
-
    
     }
    
 // Call the function to collect employee data
-//let employees = collectEmployees();
 
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
-  function displayAverageSalary(employees) {
-    const totalEmployees = employees.length;
-    const totalSalary = employees.reduce((acc, employee) => acc + employee.salary, 0);
+    const totalEmployees = employeesArray.length;
+    const totalSalary = employeesArray.reduce((acc, employee) => acc + employee.salary, 0);
     const averageSalary = totalSalary / totalEmployees;
 
     console.log(`The average employee salary between our ${totalEmployees} employee(s) is $${averageSalary.toFixed(2)}`);
 }
 
-displayAverageSalary(employees);
-}
-
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
-}
+  let index = Math.floor(Math.random().employeesArray.length);
+  let randomEmployee = employeesArray[index];
+  // Display the randomly selected employee
+  console.log(`Congratulations to ${randomEmployee.firstName} ${randomEmployee.lastName}, our random drawing winner!`);
 
+  
+}
 /*
   ====================
   STARTER CODE
@@ -118,9 +117,9 @@ const trackEmployeeData = function() {
 }
 
 // Add event listener to 'Add Employees' button
-//addEmployeesBtn.addEventListener('click', trackEmployeeData);
 addEmployeesBtn.addEventListener('click', function() {
   const employees = collectEmployees();
   displayEmployees(employees);
+  //displayAverageSalary();
 });
  
